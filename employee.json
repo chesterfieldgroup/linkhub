@@ -1,0 +1,23 @@
+[
+    {
+      "id": "rbrown",
+      "name": "Rob Brown",
+      "position": "Senior Analyst",
+      "email": "rbrown@chesterfield.com",
+      "phone": "+1234567890",
+      "photoUrl": "path/to/rbrown.jpg",
+      "specialization": "Market Analysis",
+      "url": "https://chesterfield.github.io/linkhub/index.html?id=rbrown"
+    },
+    {
+      "id": "jdoe",
+      "name": "Jane Doe",
+      "position": "Marketing Manager",
+      "email": "jdoe@chesterfield.com",
+      "phone": "+0987654321",
+      "photoUrl": "path/to/jdoe.jpg",
+      "specialization": "Digital Marketing"
+    }
+    // Add more employees as needed
+  ]
+  
