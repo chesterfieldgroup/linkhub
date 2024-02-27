@@ -1,23 +1,29 @@
 [
-    {
-      "id": "rbrown",
-      "name": "Rob Brown",
-      "position": "Senior Analyst",
-      "email": "rbrown@chesterfield.com",
-      "phone": "+1234567890",
-      "photoUrl": "path/to/rbrown.jpg",
-      "specialization": "Market Analysis",
-      "url": "https://chesterfield.github.io/linkhub/index.html?id=rbrown"
-    },
-    {
-      "id": "jdoe",
-      "name": "Jane Doe",
-      "position": "Marketing Manager",
-      "email": "jdoe@chesterfield.com",
-      "phone": "+0987654321",
-      "photoUrl": "path/to/jdoe.jpg",
-      "specialization": "Digital Marketing"
-    }
-    // Add more employees as needed
-  ]
-  
+  {
+      "id": "001",
+      "name": "John Doe",
+      "role": "CEO",
+      "mobile": "+123456789",
+      "email": "john@example.com",
+      "address": "123 Main St, City",
+      "linkedin": "https://www.linkedin.com/in/johndoe"
+  },
+  {
+      "id": "002",
+      "name": "Jane Smith",
+      "role": "CTO",
+      "mobile": "+987654321",
+      "email": "jane@example.com",
+      "address": "456 Elm St, Town",
+      "linkedin": "https://www.linkedin.com/in/janesmith"
+  },
+  {
+      "id": "003",
+      "name": "Alice Johnson",
+      "role": "CFO",
+      "mobile": "+555666777",
+      "email": "alice@example.com",
+      "address": "789 Oak St, Village",
+      "linkedin": "https://www.linkedin.com/in/alicejohnson"
+  }
+]
