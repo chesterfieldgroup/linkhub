@@ -38,7 +38,7 @@ fetch('./data.json')
     .catch(error => console.error('Error fetching data: ', error));
 
 
-function addToContactBook(){
-    vCard = Json fetch
-    when addContactBtn clicked, add contact to contact book of current user
-}
+//function addToContactBook(){
+//   vCard = Json fetch
+//    when addContactBtn clicked, add contact to contact book of current user
+//}
