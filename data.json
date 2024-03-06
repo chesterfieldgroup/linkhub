@@ -6,7 +6,8 @@
       "mobile": "+123456789",
       "email": "john@example.com",
       "address": "123 Main St, City",
-      "linkedin": "https://www.linkedin.com/in/johndoe"
+      "linkedin": "https://www.linkedin.com/in/johndoe",
+      "photo": "img/rbrown.png"
   },
   {
       "id": "002",
