@@ -24,7 +24,8 @@ fetch('./data.json')
         document.getElementById('mobile').textContent = person.mobile;
         document.getElementById('email').textContent = person.email;
         document.getElementById('address').textContent = person.address;
-        
+        document.getElementById('addContactBtn').textContent = `Add ${person.name} to contact book`;
+
         // Update LinkedIn link safely
         const linkedInElement = document.getElementById('linkedin');
         linkedInElement.textContent = ''; // Clear previous content
@@ -33,16 +34,11 @@ fetch('./data.json')
         linkedInLink.textContent = 'LinkedIn Profile';
         linkedInLink.target = '_blank';
         linkedInElement.appendChild(linkedInLink);
-        
-        const addContactBtn = document.getElementById('addContactBtn');
-        // Assuming you have a function to check if the person is already in the contact book
-        if (isPersonInContactBook(person)) {
-            addContactBtn.textContent = 'Already in contact book';
-            addContactBtn.disabled = true;
-        } else {
-            addContactBtn.textContent = 'Add to contact book'; // or some other default text
-            addContactBtn.disabled = false;
-            // Add any additional event listeners here if necessary
-        }
     })
     .catch(error => console.error('Error fetching data: ', error));
+
+
+function addToContactBook(){
+    vCard = Json fetch
+    when addContactBtn clicked, add contact to contact book of current user
+}
