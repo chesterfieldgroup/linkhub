@@ -1,0 +1,44 @@
+/* global.css */
+
+/* General styles for the card container */
+.card-container {
+    /* Insert your styles here */
+  }
+  
+  /* Profile image styles */
+  .photo-img {
+    /* Insert your styles here */
+  }
+  
+  /* Styles for the profile name */
+  .profile-name {
+    /* Insert your styles here */
+  }
+  
+  /* Styles for the profile role */
+  .profile-role {
+    /* Insert your styles here */
+  }
+  
+  /* Styles for the group/company name */
+  .group-name {
+    /* Insert your styles here */
+  }
+  
+  /* Styles for list group items (contact details) */
+  .list-group-item {
+    /* Insert your styles here */
+  }
+  
+  /* Styles for the add contact button */
+  #addContactBtn {
+    /* Insert your styles here */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Insert responsive styles for mobile devices here */
+  }
+  
+  /* Additional media queries can be added for other screen sizes if necessary */
+  
