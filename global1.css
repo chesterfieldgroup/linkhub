@@ -1,0 +1,104 @@
+/* Reset default margins and paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures padding doesn't add to the total width/height */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure the body has no margin and the font size is responsive */
+body {
+  margin: 0;
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1600 - 320)));
+}
+
+.card-container {
+  max-height: calc(100vh - 10vh); /* Example where 10vh is the total vertical margin/padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* Establishes a positioning context for absolute positioned children */
+}
+
+.card-img-top {
+  width: 100%; /* Ensure the image covers the card width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.photo-img {
+  border-radius: 50%;
+  width: 140px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+  padding: 4vh 2vw;
+  position: absolute; /* Position the card body absolutely */
+  top: 50%; /* Position it halfway down the card image */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Offset the element by half its width and height */
+  width: 90%; /* Set the width of the card body */
+}
+
+.list-group-item {
+  padding: 2vh 2vw; /* Adjust padding for list items */
+}
+
+.contact-btn {
+  margin-top: 2vh; /* Ensure there's not too much margin above the button */
+}
+
+/* Position the name and role just below the profile photo */
+.profile-name, .profile-role {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px; /* Adjust this value to position the text correctly */
+}
+
+
+/* Media query for small devices to adjust padding and margins */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 2vh 1vw; /* Smaller padding */
+  }
+  .card-body {
+    padding: 3vh 2vw; /* Adjust the padding inside the card body */
+  }
+  .photo-img {
+    width: 40%; /* Increase size on smaller screens */
+  }
+  .contact-btn {
+    padding: 2vh 1vw; /* Comfortable tap size */
+  }
+}
+
+/* Additional adjustments for extra small devices */
+@media (max-width: 375px) {
+  .profile-name, .profile-role {
+    margin: 1vh 0; /* Reduces the margin for small devices */
+    font-size: 4vw; /* Adjust font size to be responsive */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    max-height: calc(100vh - 12vh); /* Adjust the max-height as necessary */
+  }
+
+  /* Further adjustments */
+}
+
+
+.card-body, .list-group, .list-group-item, .contact-btn {
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+
