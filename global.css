@@ -19,3 +19,20 @@
     height: 50%; /* This is an example value; you may need to adjust it */
 }
 
+h5#profile-role {
+    color: #fff
+}
+
+#profile-photo {
+  position: absolute;
+  top: 50%; /* Position at half the height of the card-img-top */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the positioning to the center */
+  background: #fff; /* White background */
+  border-radius: 50%; /* Make it round */
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
