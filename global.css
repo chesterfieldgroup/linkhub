@@ -1,44 +1,93 @@
-/* global.css */
+/* Reset default margins and paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures padding doesn't add to the total width/height */
+}
 
-/* General styles for the card container */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure the body has no margin and the font size is responsive */
+body {
+  margin: 0;
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1600 - 320)));
+}
+
 .card-container {
-    /* Insert your styles here */
+  max-height: calc(100vh - 10vh); /* Example where 10vh is the total vertical margin/padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* Establishes a positioning context for absolute positioned children */
+}
+
+.card-img-top {
+  width: 100%; /* Ensure the image covers the card width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.photo-img {
+  max-height: 20vh; /* Adjust the height of the profile image */
+}
+
+.card-body {
+  padding: 4vh 2vw;
+  position: absolute; /* Position the card body absolutely */
+  top: 50%; /* Position it halfway down the card image */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Offset the element by half its width and height */
+  width: 90%; /* Set the width of the card body */
+}
+
+.list-group-item {
+  padding: 2vh 2vw; /* Adjust padding for list items */
+}
+
+.contact-btn {
+  margin-top: 2vh; /* Ensure there's not too much margin above the button */
+}
+
+
+/* Media query for small devices to adjust padding and margins */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 2vh 1vw; /* Smaller padding */
   }
-  
-  /* Profile image styles */
+  .card-body {
+    padding: 3vh 2vw; /* Adjust the padding inside the card body */
+  }
   .photo-img {
-    /* Insert your styles here */
+    width: 40%; /* Increase size on smaller screens */
   }
-  
-  /* Styles for the profile name */
-  .profile-name {
-    /* Insert your styles here */
+  .contact-btn {
+    padding: 2vh 1vw; /* Comfortable tap size */
   }
-  
-  /* Styles for the profile role */
-  .profile-role {
-    /* Insert your styles here */
+}
+
+/* Additional adjustments for extra small devices */
+@media (max-width: 375px) {
+  .profile-name, .profile-role {
+    margin: 1vh 0; /* Reduces the margin for small devices */
+    font-size: 4vw; /* Adjust font size to be responsive */
   }
-  
-  /* Styles for the group/company name */
-  .group-name {
-    /* Insert your styles here */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    max-height: calc(100vh - 12vh); /* Adjust the max-height as necessary */
   }
-  
-  /* Styles for list group items (contact details) */
-  .list-group-item {
-    /* Insert your styles here */
-  }
-  
-  /* Styles for the add contact button */
-  #addContactBtn {
-    /* Insert your styles here */
-  }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 768px) {
-    /* Insert responsive styles for mobile devices here */
-  }
-  
-  /* Additional media queries can be added for other screen sizes if necessary */
-  
+
+  /* Further adjustments */
+}
+
+
+.card-body, .list-group, .list-group-item, .contact-btn {
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+
