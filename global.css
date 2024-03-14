@@ -1,28 +1,21 @@
-.profile-overlay {
+/* Ensure the card container is positioned */
+.card-container {
     position: relative;
-    text-align: center;
+    /* make sure the container has a defined height, or it won't work */
 }
 
-.profile-img {
-    width: 120px; /* Adjust based on your preference */
-    height: 120px; /* Adjust to keep the aspect ratio */
-    border-radius: 50%;
+/* Position the overlay div */
+.profile-overlay {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust based on the exact center */
-    z-index: 2; /* Ensure it's above the background image */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* Adjust the height as necessary to match the background image's height */
+    height: 50%; /* This is an example value; you may need to adjust it */
 }
 
-.addContactBtn {
-    bottom: 10%;
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .profile-img {
-        width: 100px;
-        height: 100px;
-    }
-}
