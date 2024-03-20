@@ -116,7 +116,8 @@ function download(filename, text) {
 function handleAddContact(person) {
     // Generate a vCard from the person's data
     const vCard = createVCard(person);
-    
+    console.log(vCard);
+    /*
     // Use a regular expression to detect if the user is on an iOS device
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -127,6 +128,7 @@ function handleAddContact(person) {
         // For non-iOS devices, use the download function to save the vCard file
         download(`${person.name}.vcf`, vCard);
     }
+    */
 }
 
 // Add an event listener to the document to wait for the DOM content to be fully loaded
