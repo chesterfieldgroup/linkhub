@@ -7,7 +7,7 @@ body, html {
 
 /* Card container with shadow */
 .card-container {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Profile Overlay Styles */
@@ -20,7 +20,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     color: white;
-    padding-top: 15%; /* Adjust padding to not overlap with image */
+    padding-top: 17%; /* Adjust padding to not overlap with image */
     box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ body, html {
 #profile-photo {
     background: #fff;
     border-radius: 50%;
-    padding: 10px;
+
     position: absolute;
     top: 15%;
     left: 50%;
@@ -43,19 +43,18 @@ body, html {
 .photo-img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
 }
 
 /* Profile Text Styles */
 #profile-name {
     margin-top: 50px; /* Adjust top margin to below the image */
     font-size: 5vw;
-    margin-bottom: 0.5rem;
+    font-weight: 
 }
 
 #profile-role {
     font-size: 4vw;
-    margin-bottom: 0.25rem;
+    color: white !important;
 }
 
 .group-name {
@@ -70,12 +69,17 @@ body, html {
 
 /* Add Contact Button */
 .contact-btn {
-    font-size: 5vw;
+    font-size: 4vw;
     background-color: #007bff;
     color: white;
     padding: 1rem;
     margin: 1rem;
     width: 90%;
+}
+
+.list-group {
+    padding-top: 3vw;
+    margin: 1vw;
 }
 
 /* Responsive Breakpoints */
