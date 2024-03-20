@@ -21,12 +21,23 @@
       "photo": "img/jsimms.jpg"
   },
   {
-      "id": "003",
-      "name": "Alice Johnson",
-      "role": "CFO",
-      "mobile": "+555666777",
-      "email": "alice@example.com",
-      "address": "789 Oak St, Village",
-      "linkedin": "https://www.linkedin.com/in/alicejohnson"
-  }
+      "id": "rbailey",
+      "name": "Richard Bailey",
+      "role": "Finance Director",
+      "mobile": "+44 (0) 778 600 1877",
+      "email": "rbailey@chesterfieldgroup.co.uk",
+      "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/richard-bailey-bb971031",
+      "photo": "img/rbailey.jpg"
+  },
+  {
+    "id": "athacker",
+    "name": "Andrew Thacker",
+    "role": "Executive Director",
+    "mobile": "+44 (0) 780 272 6619",
+    "email": "athacker@chesterfieldgroup.co.uk",
+    "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
+    "linkedin": "https://www.linkedin.com/in/andrew-thacker-79572a17",
+    "photo": "img/athacker.jpg"
+}
 ]
