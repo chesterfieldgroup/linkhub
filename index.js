@@ -76,19 +76,26 @@ fetch('./data.json')
 
 // This function will create a vCard string from the person data
 function createVCard(person) {
-    // vCard format strings are joined to create the full vCard
+    // Define the base URL for images
+    const baseURL = 'https://chesterfieldgroup.github.io/linkhub/';
+
+    // Construct the full URL by appending the partial path from person.photo
+    const fullPhotoURL = baseURL + person.photo;
+
+    // Determine the media type from the file extension
+    const mediaType = person.photo.endsWith('.png') ? 'image/png' : 'image/jpeg';
+
     return [
         'BEGIN:VCARD',
-        'VERSION:3.0',
-        `FN:${person.name}`, // Full name
-        //`ORG:Chesterfield Group;${person.role}`, // Organization and role
-        `TEL;TYPE=WORK,VOICE:${person.mobile}`, // Work telephone number
-        `EMAIL;TYPE=PREF,INTERNET:${person.email}`, // Preferred email
-        `ADR;TYPE=WORK:${person.address}`, // Work address
-        `URL;TYPE=WORK:${person.linkedin}`, // LinkedIn URL
-        `PHOTO;TYPE=JPEG;ENCODING=BASE64:${person.photoBase64}`,
+        'VERSION:4.0', // Using vCard version 4.0 for better URL support
+        `FN:${person.name}`,
+        `TEL;TYPE=work,voice:${person.mobile}`,
+        `EMAIL:${person.email}`,
+        `ADR;TYPE=WORK:${person.address.replace(/,/g, ';')}`, // Formatting address for vCard 4.0
+        `URL:${person.linkedin}`,
+        `PHOTO;MEDIATYPE=${mediaType};VALUE=URI:${fullPhotoURL}`, // Using the full URL for the photo
         'END:VCARD'
-    ].join('\n'); // Newline character is used to separate each vCard line
+    ].join('\n');
 }
 
 // This function triggers the download of a text file
