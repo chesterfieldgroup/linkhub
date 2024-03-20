@@ -7,7 +7,8 @@
       "email": "rbrown@chesterfieldgroup.co.uk",
       "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://uk.linkedin.com/in/robert-brown-2039a26a",
-      "photo": "img/rbrown.png"
+      "photo": "img/rbrown.png",
+      "photoBase64": "aW1nL3Jicm93bi5wbmc="
   },
   {
       "id": "jsimms",
@@ -16,7 +17,8 @@
       "mobile": "+44 (0) 746 799 8676",
       "email": "jsimms@chesterfieldgroup.co.uk",
       "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
-      "linkedin": "https://www.linkedin.com/in/jacksimms77"
+      "linkedin": "https://www.linkedin.com/in/jacksimms77",
+      "photo": "img/jsimms.jpg"
   },
   {
       "id": "003",
