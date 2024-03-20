@@ -1,10 +1,16 @@
-/* Ensure the card container is positioned */
-.card-container {
-    position: relative;
-    /* make sure the container has a defined height, or it won't work */
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Position the overlay div */
+/* Card container with shadow */
+.card-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Overlay Styles */
 .profile-overlay {
     position: absolute;
     top: 0;
@@ -12,27 +18,87 @@
     right: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: #fff;
-    /* Adjust the height as necessary to match the background image's height */
-    height: 50%; /* This is an example value; you may need to adjust it */
+    color: white;
+    padding-top: 15%; /* Adjust padding to not overlap with image */
+    box-sizing: border-box;
 }
 
-h5#profile-role {
-    color: #fff
-}
-
+/* Profile Image Container */
 #profile-photo {
-  position: absolute;
-  top: 50%; /* Position at half the height of the card-img-top */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust the positioning to the center */
-  background: #fff; /* White background */
-  border-radius: 50%; /* Make it round */
-  width: 150px; /* Adjust size as needed */
-  height: 150px; /* Adjust size as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
 }
+
+/* Profile Image Styles */
+.photo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Profile Text Styles */
+#profile-name {
+    margin-top: 50px; /* Adjust top margin to below the image */
+    font-size: 5vw;
+    margin-bottom: 0.5rem;
+}
+
+#profile-role {
+    font-size: 4vw;
+    margin-bottom: 0.25rem;
+}
+
+.group-name {
+    font-size: 3vw;
+    margin-bottom: 2rem;
+}
+
+/* List Group Items for Contact Info */
+.list-group-item {
+    font-size: 3.5vw;
+}
+
+/* Add Contact Button */
+.contact-btn {
+    font-size: 5vw;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 90%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px) {
+    #profile-name {
+        font-size: 24px;
+    }
+    #profile-role {
+        font-size: 20px;
+    }
+    .group-name {
+        font-size: 16px;
+    }
+    .list-group-item,
+    .contact-btn {
+        font-size: 18px;
+    }
+    #profile-photo {
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
