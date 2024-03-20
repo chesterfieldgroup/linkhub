@@ -70,6 +70,7 @@ function createVCard(person) {
         `EMAIL;TYPE=PREF,INTERNET:${person.email}`, // Preferred email
         `ADR;TYPE=WORK:${person.address}`, // Work address
         `URL;TYPE=WORK:${person.linkedin}`, // LinkedIn URL
+        `PHOTO;TYPE=JPEG;ENCODING=BASE64:${person.photoBase64}`,
         'END:VCARD'
     ].join('\n'); // Newline character is used to separate each vCard line
 }

@@ -5,18 +5,18 @@
       "role": "Senior Broker",
       "mobile": "+44 (0) 773 330 6394",
       "email": "rbrown@chesterfieldgroup.co.uk",
-      "address": "5th Floor, One Minster Court, Mincing Ln, London EC3R 7AA",
+      "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://uk.linkedin.com/in/robert-brown-2039a26a",
       "photo": "img/rbrown.png"
   },
   {
-      "id": "002",
-      "name": "",
-      "role": "CTO",
-      "mobile": "+987654321",
-      "email": "jane@example.com",
-      "address": "456 Elm St, Town",
-      "linkedin": "https://www.linkedin.com/in/janesmith"
+      "id": "jsimms",
+      "name": "Jack Simms",
+      "role": "1st/2nd Line Support Technician",
+      "mobile": "+44 (0) 746 799 8676",
+      "email": "jsimms@chesterfieldgroup.co.uk",
+      "address": "5th Floor, One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/jacksimms77"
   },
   {
       "id": "003",
