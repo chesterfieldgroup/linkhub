@@ -49,7 +49,7 @@ body, html {
 #profile-name {
     margin-top: 50px; /* Adjust top margin to below the image */
     font-size: 5vw;
-    font-weight: 
+    font-weight: 4px;
 }
 
 #profile-role {
