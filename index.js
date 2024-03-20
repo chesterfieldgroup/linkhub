@@ -65,7 +65,7 @@ function createVCard(person) {
         'BEGIN:VCARD',
         'VERSION:3.0',
         `FN:${person.name}`, // Full name
-        `ORG:Chesterfield Group;${person.role}`, // Organization and role
+        //`ORG:Chesterfield Group;${person.role}`, // Organization and role
         `TEL;TYPE=WORK,VOICE:${person.mobile}`, // Work telephone number
         `EMAIL;TYPE=PREF,INTERNET:${person.email}`, // Preferred email
         `ADR;TYPE=WORK:${person.address}`, // Work address
