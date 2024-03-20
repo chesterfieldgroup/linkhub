@@ -37,6 +37,22 @@ fetch('./data.json')
         linkedInLink.target = '_blank';
         linkedInElement.appendChild(linkedInLink);
 
+        // For mobile, create an anchor element, set its attributes, and append it
+        const mobileLink = document.createElement('a');
+        mobileLink.setAttribute('href', `tel:${person.mobile}`);
+        mobileLink.textContent = person.mobile;
+        const mobileListItem = document.getElementById('mobile');
+        mobileListItem.textContent = ''; // Clear existing content
+        mobileListItem.appendChild(mobileLink);
+
+        // For email, similarly create an anchor element, set its attributes, and append it
+        const emailLink = document.createElement('a');
+        emailLink.setAttribute('href', `mailto:${person.email}`);
+        emailLink.textContent = person.email;
+        const emailListItem = document.getElementById('email');
+        emailListItem.textContent = ''; // Clear existing content
+        emailListItem.appendChild(emailLink);
+
         // Update the profile photo
         const imgElement = document.querySelector('#profile-photo img');
         if (imgElement) {
