@@ -22,10 +22,10 @@ fetch('./data.json')
         // Note: Ensure that your HTML has elements with these specific IDs
         document.getElementById('profile-name').textContent = person.name;
         document.getElementById('profile-role').textContent = person.role;
-        document.getElementById('mobile').textContent = person.mobile;
-        document.getElementById('email').textContent = person.email;
-        document.getElementById('address').textContent = person.address;
-        document.getElementById('addContactBtn').textContent = `Add ${person.name} to contact book`;
+        document.querySelector('#mobile .text-container').textContent = person.mobile;
+        document.querySelector('#email .text-container').textContent = person.email;
+        document.querySelector('#address .text-container').textContent = person.address;
+        document.getElementById('addContactText').textContent = `Add ${person.name} to Contacts`;
 
         // Update the LinkedIn profile link
         // Note: For better security practices, consider adding rel="noopener noreferrer"

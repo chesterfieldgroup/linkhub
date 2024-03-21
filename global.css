@@ -75,7 +75,7 @@ body, html {
     color: rgb(0, 0, 0);
     padding: 0.5rem;
     margin: 0.5rem;
-    width: 90%;
+    width: auto;
     display: flex; /* Use Flexbox for aligning the content */
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
