@@ -27,31 +27,31 @@ fetch('./data.json')
         document.querySelector('#address .text-container').textContent = person.address;
         document.getElementById('addContactText').textContent = `Add ${person.name} to Contacts`;
 
-        // Update the LinkedIn profile link
-        // Note: For better security practices, consider adding rel="noopener noreferrer"
-        const linkedInElement = document.getElementById('linkedin');
-        linkedInElement.textContent = ''; // Clear any existing content
-        const linkedInLink = document.createElement('a');
-        linkedInLink.href = person.linkedin;
-        linkedInLink.textContent = 'LinkedIn Profile';
-        linkedInLink.target = '_blank';
-        linkedInElement.appendChild(linkedInLink);
-
         // For mobile, create an anchor element, set its attributes, and append it
         const mobileLink = document.createElement('a');
         mobileLink.setAttribute('href', `tel:${person.mobile}`);
         mobileLink.textContent = person.mobile;
-        const mobileListItem = document.getElementById('mobile');
-        mobileListItem.textContent = ''; // Clear existing content
-        mobileListItem.appendChild(mobileLink);
+        const mobileTextContainer = document.querySelector('#mobile .text-container');
+        mobileTextContainer.textContent = ''; // Clear existing text content
+        mobileTextContainer.appendChild(mobileLink);
 
         // For email, similarly create an anchor element, set its attributes, and append it
         const emailLink = document.createElement('a');
         emailLink.setAttribute('href', `mailto:${person.email}`);
         emailLink.textContent = person.email;
-        const emailListItem = document.getElementById('email');
-        emailListItem.textContent = ''; // Clear existing content
-        emailListItem.appendChild(emailLink);
+        const emailTextContainer = document.querySelector('#email .text-container');
+        emailTextContainer.textContent = ''; // Clear existing text content
+        emailTextContainer.appendChild(emailLink);
+
+        // For LinkedIn, update the text container with a link
+        const linkedInTextContainer = document.querySelector('#linkedin .text-container');
+        linkedInTextContainer.textContent = ''; // Clear existing content
+        const linkedInLink = document.createElement('a');
+        linkedInLink.href = person.linkedin;
+        linkedInLink.textContent = 'LinkedIn Profile';
+        linkedInLink.target = '_blank';
+        linkedInTextContainer.appendChild(linkedInLink);
+
 
         // Update the profile photo
         const imgElement = document.querySelector('#profile-photo img');
