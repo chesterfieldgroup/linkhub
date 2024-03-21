@@ -140,7 +140,7 @@ body, html {
     }
 }
 
-@media (max-width: 290px) {
+@media (max-width: 310px) {
     
     #profile-photo {
     background: #fff;
