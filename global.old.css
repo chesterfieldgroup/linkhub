@@ -1,0 +1,108 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card container with shadow */
+.card-container {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Overlay Styles */
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 17%; /* Adjust padding to not overlap with image */
+    box-sizing: border-box;
+}
+
+/* Profile Image Container */
+#profile-photo {
+    
+    border-radius: 50%;
+
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* Profile Image Styles */
+.photo-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Profile Text Styles */
+#profile-name {
+    margin-top: 50px; /* Adjust top margin to below the image */
+    font-size: 5vw;
+    font-weight: 4px;
+}
+
+#profile-role {
+    font-size: 4vw;
+    color: white !important;
+}
+
+.group-name {
+    font-size: 3vw;
+    margin-bottom: 2rem;
+}
+
+/* List Group Items for Contact Info */
+.list-group-item {
+    font-size: 3.5vw;
+}
+
+/* Add Contact Button */
+.contact-btn {
+    font-size: 4vw;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 90%;
+}
+
+.list-group {
+    padding-top: 3vw;
+    margin: 1vw;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px) {
+    #profile-name {
+        font-size: 24px;
+    }
+    #profile-role {
+        font-size: 20px;
+    }
+    .group-name {
+        font-size: 16px;
+    }
+    .list-group-item,
+    .contact-btn {
+        font-size: 18px;
+    }
+    #profile-photo {
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
