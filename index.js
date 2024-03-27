@@ -61,6 +61,19 @@ fetch('./data.json')
         addressTextContainer.textContent = ''; // Clear existing text content
         addressTextContainer.appendChild(addressLink);
 
+         // For the website, create a hyperlink and append it
+         if (person.website) { // Check if the website property exists
+            const websiteListItem = document.getElementById('website');
+            const websiteTextContainer = websiteListItem.querySelector('.text-container');
+            websiteTextContainer.textContent = ''; // Clear existing text content
+            const websiteLink = document.createElement('a');
+            websiteLink.setAttribute('href', person.website);
+            websiteLink.textContent = person.website;
+            websiteLink.setAttribute('target', '_blank'); // Open in new tab
+            websiteTextContainer.appendChild(websiteLink);
+            websiteListItem.style.display = 'flex'; // Make the website section visible
+          }
+
         // Update the profile photo
         const imgElement = document.querySelector('#profile-photo img');
         if (imgElement) {
