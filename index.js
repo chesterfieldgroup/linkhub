@@ -55,7 +55,7 @@ fetch('./data.json')
         // For the address, create a map link
         const addressLink = document.createElement('a');
         addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
-        addressLink.textContent = 'View on Map';
+        addressLink.textContent = person.address;
         addressLink.setAttribute('target', '_blank'); // Open in new tab
         const addressTextContainer = document.querySelector('#address .text-container');
         addressTextContainer.textContent = ''; // Clear existing text content
