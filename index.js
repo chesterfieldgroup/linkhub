@@ -83,25 +83,16 @@ fetch('./data.json')
     });
 
 // This function will create a vCard string from the person data
-function createVCard(person) {
-    // Define the base URL for images
-    const baseURL = 'https://chesterfieldgroup.github.io/linkhub/';
-
-    // Construct the full URL by appending the partial path from person.photo
-    const fullPhotoURL = baseURL + person.photo;
-
-    // Determine the media type from the file extension
-    const mediaType = person.photo.endsWith('.png') ? 'image/png' : 'image/jpeg';
-
+function createVCard(person, base64Image) {
     return [
         'BEGIN:VCARD',
-        'VERSION:4.0', // Using vCard version 4.0 for better URL support
+        'VERSION:4.0',
         `FN:${person.name}`,
         `TEL;TYPE=work,voice:${person.mobile}`,
         `EMAIL:${person.email}`,
-        `ADR;TYPE=WORK:${person.address.replace(/,/g, ';')}`, // Formatting address for vCard 4.0
+        `ADR;TYPE=WORK:${person.address.replace(/,/g, ';')}`,
         `URL:${person.linkedin}`,
-        `PHOTO;MEDIATYPE=${mediaType};VALUE=URI:${fullPhotoURL}`, // Using the full URL for the photo
+        `PHOTO;ENCODING=b;TYPE=image/jpeg:${base64Image.replace(/^data:image\/jpeg;base64,/, '')}`, // Embed the base64 image
         'END:VCARD'
     ].join('\n');
 }
@@ -122,20 +113,37 @@ function download(filename, text) {
 
 // This function handles adding a contact depending on the platform
 function handleAddContact(person) {
-    // Generate a vCard from the person's data
-    const vCard = createVCard(person);
-    console.log(vCard);
-    // Use a regular expression to detect if the user is on an iOS device
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    // Define the base URL for images
+    const baseURL = 'https://chesterfieldgroup.github.io/linkhub/';
 
-    if (isIOS) {
-        // For iOS Devices, use a data URI scheme to open the vCard text, prompting to add to contacts
-        window.location.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCard)}`;
-    } else {
-        // For non-iOS devices, use the download function to save the vCard file
-        download(`${person.name}.vcf`, vCard);
-    }
-    
+    // Construct the full URL by appending the partial path from person.photo
+    const fullPhotoURL = baseURL + person.photo;
+
+    // Convert the person's photo to a base64 string
+    convertImageToBase64(fullPhotoURL, base64Image => {
+        // Once the image is converted, generate the vCard using the base64Image
+        const vCard = createVCard(person, base64Image); // Pass base64Image to createVCard
+        console.log(vCard);
+
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        if (isIOS) {
+            window.location.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCard)}`;
+        } else {
+            download(`${person.name}.vcf`, vCard);
+        }
+    });
+}
+
+function convertImageToBase64(url, callback) {
+    fetch(url)
+        .then(response => response.blob()) // Convert the response to a Blob
+        .then(blob => {
+            const reader = new FileReader();
+            reader.onloadend = () => callback(reader.result); // Call the callback with the base64 string
+            reader.readAsDataURL(blob); // Read the Blob as a Data URL (base64)
+        })
+        .catch(error => console.error('Error converting image to Base64:', error));
 }
 
 // Add an event listener to the document to wait for the DOM content to be fully loaded
