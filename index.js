@@ -26,7 +26,7 @@ fetch('./data.json')
         document.querySelector('#email .text-container').textContent = person.email;
         document.querySelector('#address .text-container').textContent = person.address;
         document.getElementById('addContactText').textContent = `Click Here ${person.name} to Contacts`;
-
+        
         // For mobile, create an anchor element, set its attributes, and append it
         const mobileLink = document.createElement('a');
         mobileLink.setAttribute('href', `tel:${person.mobile}`);
@@ -34,24 +34,32 @@ fetch('./data.json')
         const mobileTextContainer = document.querySelector('#mobile .text-container');
         mobileTextContainer.textContent = ''; // Clear existing text content
         mobileTextContainer.appendChild(mobileLink);
-
-        // For email, similarly create an anchor element, set its attributes, and append it
+        
+        // For email, create an anchor element, set its attributes, and append it
         const emailLink = document.createElement('a');
         emailLink.setAttribute('href', `mailto:${person.email}`);
         emailLink.textContent = person.email;
         const emailTextContainer = document.querySelector('#email .text-container');
         emailTextContainer.textContent = ''; // Clear existing text content
         emailTextContainer.appendChild(emailLink);
-
+        
         // For LinkedIn, update the text container with a link
         const linkedInTextContainer = document.querySelector('#linkedin .text-container');
         linkedInTextContainer.textContent = ''; // Clear existing content
         const linkedInLink = document.createElement('a');
-        linkedInLink.href = person.linkedin;
+        linkedInLink.setAttribute('href', person.linkedin);
         linkedInLink.textContent = 'LinkedIn Profile';
-        linkedInLink.target = '_blank';
+        linkedInLink.setAttribute('target', '_blank');
         linkedInTextContainer.appendChild(linkedInLink);
-
+        
+        // For the address, create a map link
+        const addressLink = document.createElement('a');
+        addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
+        addressLink.textContent = 'View on Map';
+        addressLink.setAttribute('target', '_blank'); // Open in new tab
+        const addressTextContainer = document.querySelector('#address .text-container');
+        addressTextContainer.textContent = ''; // Clear existing text content
+        addressTextContainer.appendChild(addressLink);
 
         // Update the profile photo
         const imgElement = document.querySelector('#profile-photo img');
