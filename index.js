@@ -71,7 +71,7 @@ fetch('./data.json')
             websiteLink.textContent = person.website;
             websiteLink.setAttribute('target', '_blank'); // Open in new tab
             websiteTextContainer.appendChild(websiteLink);
-            websiteListItem.style.display = 'flex'; // Make the website section visible
+            websiteListItem.style.display = 'block'; // Make the website section visible
           }
 
         // Update the profile photo
