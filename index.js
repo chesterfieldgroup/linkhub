@@ -86,17 +86,28 @@ fetch('./data.json')
 function createVCard(person, base64Image) {
     // Extract the MIME type from the base64Image string
     let mimeType = base64Image.match(/^data:(image\/[a-z]+);base64,/)[1];
+    let base64Data = base64Image.replace(/^data:image\/[a-z]+;base64,/, '');
 
-    // Replace the entire PHOTO line with a dynamic MIME type
+    // In vCard 3.0, PHOTO property uses encoding inline and does not specify MEDIATYPE
+    let photoLine;
+    if (mimeType === 'image/jpeg') {
+        photoLine = `PHOTO;TYPE=JPEG;ENCODING=BASE64:${base64Data}`;
+    } else if (mimeType === 'image/png') {
+        photoLine = `PHOTO;TYPE=PNG;ENCODING=BASE64:${base64Data}`;
+    } else {
+        // Default to JPEG if unsure
+        photoLine = `PHOTO;TYPE=JPEG;ENCODING=BASE64:${base64Data}`;
+    }
+
     return [
         'BEGIN:VCARD',
-        'VERSION:4.0',
+        'VERSION:3.0',
         `FN:${person.name}`,
-        `TEL;TYPE=work,voice:${person.mobile}`,
-        `EMAIL:${person.email}`,
-        `ADR;TYPE=WORK:${person.address.replace(/,/g, ';')}`,
+        `TEL;TYPE=WORK,VOICE:${person.mobile}`,
+        `EMAIL;TYPE=INTERNET:${person.email}`,
+        `ADR;TYPE=WORK:${person.address.replace(/,/g, ';').replace(/\n/g, '\\n')}`, // Note: newline in address may need to be escaped in vCard 3.0
         `URL:${person.linkedin}`,
-        `PHOTO;ENCODING=b;TYPE=${mimeType}:${base64Image.replace(/^data:image\/[a-z]+;base64,/, '')}`, // Dynamic MIME type
+        photoLine, // Use the dynamically determined photo line
         'END:VCARD'
     ].join('\n');
 }
