@@ -25,7 +25,7 @@ fetch('./data.json')
         document.querySelector('#mobile .text-container').textContent = person.mobile;
         document.querySelector('#email .text-container').textContent = person.email;
         document.querySelector('#address .text-container').textContent = person.address;
-        document.getElementById('addContactText').textContent = `Add ${person.name} to Contacts`;
+        document.getElementById('addContactText').textContent = `Click Here ${person.name} to Contacts`;
 
         // For mobile, create an anchor element, set its attributes, and append it
         const mobileLink = document.createElement('a');
