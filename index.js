@@ -52,13 +52,21 @@ fetch('./data.json')
         linkedInLink.setAttribute('target', '_blank');
         linkedInTextContainer.appendChild(linkedInLink);
         
-        // For the address, create a map link
+        // For the address, create a map link without using innerHTML
         const addressLink = document.createElement('a');
         addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
+        addressLink.setAttribute('target', '_blank');
         addressLink.textContent = person.address;
-        addressLink.setAttribute('target', '_blank'); // Open in new tab
+
+        // Retrieve the address container
         const addressTextContainer = document.querySelector('#address .text-container');
-        addressTextContainer.textContent = ''; // Clear existing text content
+
+        // Clear previous contents but maintain the node
+        while (addressTextContainer.firstChild) {
+            addressTextContainer.removeChild(addressTextContainer.firstChild);
+        }
+
+        // Append the new address link
         addressTextContainer.appendChild(addressLink);
 
          // For the website, create a hyperlink and append it
