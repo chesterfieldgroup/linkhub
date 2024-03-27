@@ -95,28 +95,23 @@ body, html {
 .list-group-item {
     display: flex;
     align-items: center;
-  }
+}
   
   .icon-container {
     display: flex; /* Make this flex to vertically center the icons */
     align-items: center; /* Center icons vertically */
     justify-content: center; /* Center icons horizontally */
-    width: 30px; /* Fixed width for the icon container */
-    height: 30px; /* Fixed height for the icon container, if needed */
+    width: 40px; /* Fixed width for the icon container */
+    height: 40px; /* Fixed height for the icon container, if needed */
   }
   
   .icon {
     max-height: 100%; /* Ensure the icon is no taller than the container */
     max-width: 100%; /* Ensure the icon is no wider than the container */
   }
-
-  .small-icon {
-    max-height: 100%; /* Ensure the icon is no taller than the container */
-    max-width: 100%; /* Ensure the icon is no wider than the container */
-  }
   
   .text-container {
-    margin-left: 1rem; /* Space between the icon and the text */
+    margin-left: 1.5rem; /* Space between the icon and the text */
   }
   
 

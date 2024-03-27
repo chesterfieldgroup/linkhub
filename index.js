@@ -68,10 +68,10 @@ fetch('./data.json')
             websiteTextContainer.textContent = ''; // Clear existing text content
             const websiteLink = document.createElement('a');
             websiteLink.setAttribute('href', person.website);
-            websiteLink.textContent = 'What I Do (Chesterfield Website Link)';
+            websiteLink.textContent = 'What I Do - Chesterfield Website';
             websiteLink.setAttribute('target', '_blank'); // Open in new tab
             websiteTextContainer.appendChild(websiteLink);
-            websiteListItem.style.display = 'block'; // Make the website section visible
+            websiteListItem.style.display = 'flex'; // Make the website section visible
           }
 
         // Update the profile photo
