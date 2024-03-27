@@ -84,6 +84,10 @@ fetch('./data.json')
 
 // This function will create a vCard string from the person data
 function createVCard(person, base64Image) {
+    // Extract the MIME type from the base64Image string
+    let mimeType = base64Image.match(/^data:(image\/[a-z]+);base64,/)[1];
+
+    // Replace the entire PHOTO line with a dynamic MIME type
     return [
         'BEGIN:VCARD',
         'VERSION:4.0',
@@ -92,10 +96,11 @@ function createVCard(person, base64Image) {
         `EMAIL:${person.email}`,
         `ADR;TYPE=WORK:${person.address.replace(/,/g, ';')}`,
         `URL:${person.linkedin}`,
-        `PHOTO;ENCODING=b;TYPE=image/jpeg:${base64Image.replace(/^data:image\/jpeg;base64,/, '')}`, // Embed the base64 image
+        `PHOTO;ENCODING=b;TYPE=${mimeType}:${base64Image.replace(/^data:image\/[a-z]+;base64,/, '')}`, // Dynamic MIME type
         'END:VCARD'
     ].join('\n');
 }
+
 
 // This function triggers the download of a text file
 function download(filename, text) {
