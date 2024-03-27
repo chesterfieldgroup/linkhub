@@ -68,7 +68,7 @@ fetch('./data.json')
             websiteTextContainer.textContent = ''; // Clear existing text content
             const websiteLink = document.createElement('a');
             websiteLink.setAttribute('href', person.website);
-            websiteLink.textContent = 'Click for Detail on What I Do';
+            websiteLink.textContent = 'What I Do (Chesterfield Website Link)';
             websiteLink.setAttribute('target', '_blank'); // Open in new tab
             websiteTextContainer.appendChild(websiteLink);
             websiteListItem.style.display = 'block'; // Make the website section visible
