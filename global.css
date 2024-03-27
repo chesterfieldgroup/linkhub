@@ -108,7 +108,11 @@ body, html {
   .icon {
     max-height: 100%; /* Ensure the icon is no taller than the container */
     max-width: 100%; /* Ensure the icon is no wider than the container */
-    /* You don't need to set a specific height or margin-right if you have a container */
+  }
+
+  .small-icon {
+    max-height: 100%; /* Ensure the icon is no taller than the container */
+    max-width: 100%; /* Ensure the icon is no wider than the container */
   }
   
   .text-container {
