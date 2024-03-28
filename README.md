@@ -1,0 +1,4 @@
+#Chesterfield Insurance Brokers Link Hub
+This software acts as a point to serve individual websites for each employee within the company. This website was designed given a re-design of business cards to which QR codes are implemented to point to employees websites. The website features JavaScript that fetches employee data from a JSON file, and contains functions to populate the single index.html file and also facilates the creation and download of a vCard to allow users to quickly and easily import contact details, instead of entering details manually. The code features a function to dynamically change a image to Base64 given this is the only working format that vCard accepts for images.
+
+The styling is consistent and has been written with Bootstrap to ensure that the website is responsive.
