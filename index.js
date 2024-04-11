@@ -24,7 +24,7 @@ fetch('./data.json')
         document.getElementById('profile-role').textContent = person.role;
         document.querySelector('#mobile .text-container').textContent = person.mobile;
         document.querySelector('#email .text-container').textContent = person.email;
-        document.querySelector('#address .text-container').textContent = person.address;
+       
         document.getElementById('addContactText').textContent = `Click Here ${person.name} to Contacts`;
         
         // For mobile, create an anchor element, set its attributes, and append it
@@ -53,21 +53,21 @@ fetch('./data.json')
         linkedInTextContainer.appendChild(linkedInLink);
         
         // For the address, create a map link without using innerHTML
-        const addressLink = document.createElement('a');
-        addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
-        addressLink.setAttribute('target', '_blank');
-        addressLink.textContent = person.address;
+        // const addressLink = document.createElement('a');
+        // addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
+        // addressLink.setAttribute('target', '_blank');
+        // addressLink.textContent = person.address;
 
         // Retrieve the address container
-        const addressTextContainer = document.querySelector('#address .text-container');
+        //const addressTextContainer = document.querySelector('#address .text-container');
 
         // Clear previous contents but maintain the node
-        while (addressTextContainer.firstChild) {
-            addressTextContainer.removeChild(addressTextContainer.firstChild);
-        }
+        //while (addressTextContainer.firstChild) {
+        //    addressTextContainer.removeChild(addressTextContainer.firstChild);
+        //}
 
         // Append the new address link
-        addressTextContainer.appendChild(addressLink);
+        //addressTextContainer.appendChild(addressLink);
 
          // For the website, create a hyperlink and append it
          if (person.website) { // Check if the website property exists
