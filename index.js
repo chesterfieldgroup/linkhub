@@ -24,7 +24,6 @@ fetch('./data.json')
         document.getElementById('profile-role').textContent = person.role;
         document.querySelector('#mobile .text-container').textContent = person.mobile;
         document.querySelector('#email .text-container').textContent = person.email;
-       
         document.getElementById('addContactText').textContent = `Click Here ${person.name} to Contacts`;
         
         // For mobile, create an anchor element, set its attributes, and append it
