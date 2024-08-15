@@ -24,9 +24,10 @@ fetch('./data.json')
         document.getElementById('profile-role').textContent = person.role;
         document.querySelector('#mobile .text-container').textContent = person.mobile;
         document.querySelector('#email .text-container').textContent = person.email;
-       
-        document.getElementById('addContactText').textContent = `Click Here ${person.name} to Contacts`;
-        
+
+        // Set the initial button text
+        document.getElementById('addContactText').textContent = `Click Here to Add ${person.name} to Contacts`;
+
         // For mobile, create an anchor element, set its attributes, and append it
         const mobileLink = document.createElement('a');
         mobileLink.setAttribute('href', `tel:${person.mobile}`);
@@ -34,7 +35,7 @@ fetch('./data.json')
         const mobileTextContainer = document.querySelector('#mobile .text-container');
         mobileTextContainer.textContent = ''; // Clear existing text content
         mobileTextContainer.appendChild(mobileLink);
-        
+
         // For email, create an anchor element, set its attributes, and append it
         const emailLink = document.createElement('a');
         emailLink.setAttribute('href', `mailto:${person.email}`);
@@ -42,7 +43,7 @@ fetch('./data.json')
         const emailTextContainer = document.querySelector('#email .text-container');
         emailTextContainer.textContent = ''; // Clear existing text content
         emailTextContainer.appendChild(emailLink);
-        
+
         // For LinkedIn, update the text container with a link
         const linkedInTextContainer = document.querySelector('#linkedin .text-container');
         linkedInTextContainer.textContent = ''; // Clear existing content
@@ -51,26 +52,9 @@ fetch('./data.json')
         linkedInLink.textContent = 'LinkedIn Profile';
         linkedInLink.setAttribute('target', '_blank');
         linkedInTextContainer.appendChild(linkedInLink);
-        
-        // For the address, create a map link without using innerHTML
-        // const addressLink = document.createElement('a');
-        // addressLink.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.address)}`);
-        // addressLink.setAttribute('target', '_blank');
-        // addressLink.textContent = person.address;
 
-        // Retrieve the address container
-        //const addressTextContainer = document.querySelector('#address .text-container');
-
-        // Clear previous contents but maintain the node
-        //while (addressTextContainer.firstChild) {
-        //    addressTextContainer.removeChild(addressTextContainer.firstChild);
-        //}
-
-        // Append the new address link
-        //addressTextContainer.appendChild(addressLink);
-
-         // For the website, create a hyperlink and append it
-         if (person.website) { // Check if the website property exists
+        // For the website, create a hyperlink and append it
+        if (person.website) { // Check if the website property exists
             const websiteListItem = document.getElementById('website');
             const websiteTextContainer = websiteListItem.querySelector('.text-container');
             websiteTextContainer.textContent = ''; // Clear existing text content
@@ -80,7 +64,7 @@ fetch('./data.json')
             websiteLink.setAttribute('target', '_blank'); // Open in new tab
             websiteTextContainer.appendChild(websiteLink);
             websiteListItem.style.display = 'flex'; // Make the website section visible
-          }
+        }
 
         // Update the profile photo
         const imgElement = document.querySelector('#profile-photo img');
@@ -89,14 +73,32 @@ fetch('./data.json')
             imgElement.alt = `Profile photo of ${person.name}`;
         }
 
+        // Specific adjustment for Simon Cassey
         if (person.id === 'scassey') {
             document.getElementById('profile-photo').classList.add('simon-cassey-photo');
         }
 
         // Add click event listener for the 'addContactBtn'
-        // This has been moved inside the .then() to ensure 'person' is defined
         const addContactBtn = document.getElementById('addContactBtn');
+
+        // Check if the button exists to avoid errors
         if (addContactBtn) {
+            // Change text based on screen width
+            function updateButtonText() {
+                if (window.innerWidth > 768) { // Consider a tablet or larger (e.g., 768px is a common breakpoint)
+                    addContactBtn.querySelector('span').textContent = `Click Here to Add ${person.name} to Contacts`;
+                } else {
+                    addContactBtn.querySelector('span').textContent = `Tap Here to Add ${person.name} to Contacts`;
+                }
+            }
+
+            // Run on load
+            updateButtonText();
+
+            // Optionally, update on resize to handle any screen changes
+            window.addEventListener('resize', updateButtonText);
+
+            // Add the event listener for the button click
             addContactBtn.addEventListener('click', function () {
                 handleAddContact(person);
             });
@@ -136,7 +138,6 @@ function createVCard(person, base64Image) {
         'END:VCARD'
     ].join('\n');
 }
-
 
 // This function triggers the download of a text file
 function download(filename, text) {
