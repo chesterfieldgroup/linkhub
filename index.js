@@ -89,6 +89,10 @@ fetch('./data.json')
             imgElement.alt = `Profile photo of ${person.name}`;
         }
 
+        if (person.id === 'scassey') {
+            document.getElementById('profile-photo').classList.add('simon-cassey-photo');
+        }
+
         // Add click event listener for the 'addContactBtn'
         // This has been moved inside the .then() to ensure 'person' is defined
         const addContactBtn = document.getElementById('addContactBtn');

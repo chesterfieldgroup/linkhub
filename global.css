@@ -169,6 +169,11 @@ body, html {
     }
 }
 
+/* Specific adjustments for Simon Cassey's photo */
+.simon-cassey-photo .photo-img {
+    object-position: 0 20%; /* Move Simon's photo down */
+}
+
 
 @media (min-width: 800px) {
     #profile-name {
@@ -202,5 +207,22 @@ body, html {
     color: white;
     padding-top: 30%; /* Adjust padding to not overlap with image */
     box-sizing: border-box;
+    }
+}
+
+/* Adjust photo size for smaller screens */
+@media (max-width: 600px) {
+    #profile-photo {
+        width: 80px; /* Reduce the size of the photo */
+        height: 80px;
+        top: 20%; /* Adjust the position slightly */
+    }
+
+    /* Adjust image size */
+    .photo-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top; /* This helps to center the face vertically */
     }
 }
