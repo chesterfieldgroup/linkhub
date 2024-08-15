@@ -22,7 +22,6 @@ fetch('./data.json')
         // Note: Ensure that your HTML has elements with these specific IDs
         document.getElementById('profile-name').textContent = person.name;
         document.getElementById('profile-role').textContent = person.role;
-        document.getElementById('department').textContent = person.department;
         document.querySelector('#mobile .text-container').textContent = person.mobile;
         document.querySelector('#email .text-container').textContent = person.email;
        
