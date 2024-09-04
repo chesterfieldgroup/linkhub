@@ -78,17 +78,14 @@ fetch('./data.json')
             document.getElementById('profile-photo').classList.add('simon-cassey-photo');
         }
 
-        // Specific adjustment for Simon Cassey
         if (person.id === 'epheby') {
             document.getElementById('profile-photo').classList.add('evan-pheby-photo');
         }
-
-        // Specific adjustment for Simon Cassey
+     
         if (person.id === 'cbarry') {
             document.getElementById('profile-photo').classList.add('chris-barry-photo');
         }
-
-        // Specific adjustment for Simon Cassey
+    
         if (person.id === 'rthomas') {
             document.getElementById('profile-photo').classList.add('ricky-thomas-photo');
         }
