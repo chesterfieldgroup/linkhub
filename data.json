@@ -8,7 +8,7 @@
       "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://uk.linkedin.com/in/robert-brown-2039a26a",
       "website": "https://www.chesterfieldgroup.co.uk/products/political-violence-terrorism/",
-      "photo": "img/rbrown.png"
+      "photo": "img/employees/rbrown.png"
     },
     
     {
@@ -19,7 +19,7 @@
       "email": "jsimms@chesterfieldgroup.co.uk",
       "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://www.linkedin.com/in/jacksimms77",
-      "photo": "img/jsimms.jpg"
+      "photo": "img/employees/jsimms.jpg"
     },
 
     {
@@ -30,7 +30,7 @@
       "email": "rbailey@chesterfieldgroup.co.uk",
       "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://www.linkedin.com/in/richard-bailey-bb971031",
-      "photo": "img/rbailey.jpg"
+      "photo": "img/employees/rbailey.jpg"
     },
 
     {
@@ -41,6 +41,18 @@
     "email": "athacker@chesterfieldgroup.co.uk",
     "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
     "linkedin": "https://www.linkedin.com/in/andrew-thacker-79572a17",
-    "photo": "img/athacker.jpg"
+    "photo": "img/employees/athacker.jpg"
+    },
+
+    {
+      "id": "scassey",
+      "name": "Simon Cassey",
+      "role": "Senior Vice President - Defence and Security",
+      "mobile": "+44 (0) 788 555 6087",
+      "email": "scassey@chesterfieldgroup.co.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/simon-cassey-52b49322",
+      "website": "https://www.chesterfieldgroup.co.uk/products/security-industry",
+      "photo": "img/employees/scassey.jpg"
     }
 ]
