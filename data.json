@@ -54,5 +54,39 @@
       "linkedin": "https://www.linkedin.com/in/simon-cassey-52b49322",
       "website": "https://www.chesterfieldgroup.co.uk/products/security-industry",
       "photo": "img/employees/scassey.jpg"
+    },
+
+    {
+      "id": "cbarry",
+      "name": "Christopher Barry",
+      "role": "Senior Broker - Global Specialty",
+      "mobile": "+44 (0) 7425 076190",
+      "email": "cbarry@chesterfieldgroup.co.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/christopher-barry-95492b60/",
+      "photo": "img/employees/cbarry.png"
+    },
+
+    {
+      "id": "epheby",
+      "name": "Evan Pheby",
+      "role": "Broker - Global Specialty",
+      "mobile": "+44 (0) 7774 646 831",
+      "email": "epheby@chesterfieldgroup.co.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://uk.linkedin.com/in/evan-pheby-3a668316",
+      "photo": "img/employees/epheby.jpeg"
+    },
+
+    {
+      "id": "rthomas",
+      "name": "Ricky Thomas",
+      "role": "Broker - Global Specialty",
+      "mobile": "+44 (0) 787 630 9897",
+      "email": "rthomas@chesterfieldgroup.co.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/ricky-thomas-779700122/",
+      "photo": "img/employees/rthomas.png"
     }
+
 ]
