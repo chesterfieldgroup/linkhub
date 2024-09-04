@@ -176,7 +176,7 @@ body, html {
 
 /* Specific adjustments for Evan Pheby's photo */
 .evan-pheby-photo .photo-img {
-    object-position: 0 -3%; /* Move Simon's photo down */
+    object-position: 0%; 
 }
 
 /* Specific adjustments for Chris Barry's photo */
@@ -235,7 +235,7 @@ body, html {
     /* Adjust image size */
     .photo-img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         object-position: top; /* This helps to center the face vertically */
     }
