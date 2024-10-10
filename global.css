@@ -10,6 +10,13 @@ body, html {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.mb-5, .my-5 {
+    margin-bottom: 1rem !important;
+}
+.mt-5, .my-5 {
+    margin-top: 1rem !important;
+}
+
 /* Profile Overlay Styles */
 .profile-overlay {
     position: absolute;
@@ -20,7 +27,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     color: white;
-    padding-top: 25%; /* Adjust padding to not overlap with image */
+    padding-top: 22%; /* Adjust padding to not overlap with image */
     box-sizing: border-box;
 }
 
@@ -72,11 +79,13 @@ body, html {
     font-style: italic;
     font-size: 3vw;
     background-color: #ffffff;
-    border-color: #315343;
+    border-color: #077429;
     color: rgb(0, 0, 0);
     padding: 0.5rem;
     margin: 0.5rem;
     width: auto;
+    border-radius: 10px;
+    border-width: 2px;
     display: flex; /* Use Flexbox for aligning the content */
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
@@ -219,7 +228,7 @@ body, html {
     #profile-photo {
         width: 100px; /* Reduce the size of the photo */
         height: 100px;
-        top: 16%; /* Adjust the position slightly */
+        top: 12%; /* Adjust the position slightly */
     }
 
     /* Adjust image size */
@@ -228,5 +237,25 @@ body, html {
         height: 100%;
         object-fit: cover;
         object-position: top; /* This helps to center the face vertically */
+    }
+
+    .profile-name {
+        font-size: 1.8rem !important;
+    }
+
+    .profile-role {
+        font-size: 1.2rem !important;
+    }
+
+    .group-name {
+        font-size: 1.1rem !important;
+    }
+
+    #addContactText {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        font-size: 1.5rem;
     }
 }
