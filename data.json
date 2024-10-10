@@ -87,6 +87,16 @@
       "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://www.linkedin.com/in/ricky-thomas-779700122/",
       "photo": "img/employees/rthomas2.png"
-    }
+    },
 
+    {
+      "id": "pgreensmith",
+      "name": "Paul Greensmith",
+      "role": "CEO",
+      "mobile": "+44 (0) 751 158 7603",
+      "email": "cgreensmith@hwkaufman.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/paul-greensmith-25079724/",
+      "photo": "img/employees/pgreensmith.jpg"
+    }
 ]
