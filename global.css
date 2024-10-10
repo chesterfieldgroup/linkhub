@@ -240,22 +240,22 @@ body, html {
     }
 
     .profile-name {
-        font-size: 1.8rem !important;
+        font-size: 1.3rem !important;
     }
 
     .profile-role {
-        font-size: 1.2rem !important;
+        font-size: 0.9rem !important;
     }
 
     .group-name {
-        font-size: 1.1rem !important;
+        font-size: 0.8rem !important;
     }
 
     #addContactText {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .text-container {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
