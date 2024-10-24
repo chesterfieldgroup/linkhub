@@ -98,5 +98,17 @@
       "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
       "linkedin": "https://www.linkedin.com/in/paul-greensmith-25079724/",
       "photo": "img/employees/pgreensmith.jpg"
+    },
+
+    {
+      "id": "nrose",
+      "name": "Nathan Rose",
+      "role": "Executive Director - Global Speciality",
+      "mobile": "+44 (0) 7471 998787",
+      "email": "nrose@chesterfieldgroup.co.uk",
+      "address": "One Minster Court, Mincing Lane, London, EC3R 7AA",
+      "linkedin": "https://www.linkedin.com/in/nathan-rose-acii-08a01838/",
+      "website": "https://www.chesterfieldgroup.co.uk/products/international-uk/",
+      "photo": "img/employees/nrose.png"
     }
 ]
